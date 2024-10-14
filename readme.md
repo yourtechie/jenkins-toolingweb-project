@@ -172,7 +172,6 @@ Test the configuration and make sure the connection returns Success. Remember, t
 
 Save the configuration, open Jenkins job/project configuration page and add another one "Post-build Action"
    ![](images/28.png)
-   ![](images/29.png)
 
 
 Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all files and directories - so we use **. If you want to apply some particular pattern to define which files to send - use this syntax.
@@ -183,7 +182,7 @@ Webhook will trigger a new job and in the "Console Output" of the job you will f
 
 ssh: Transferred 24 file(s)
 Finished: SUCCESS
-   ![](images/28.png)
+   ![](images/29.png)
 
 
 If you find an error, change security settings of NFS Server
@@ -192,16 +191,16 @@ If you find an error, change security settings of NFS Server
 sudo chown -R nobody:nobody /mnt
 sudo chmod -R 777 /mnt
 ```
-   ![](images/29.png)
-
-To make sure that the files in /mnt/apps have been udated - connect via SSH/Putty to NFS server and check README.MD file.
-```bash
-cat /mnt/apps/README.md
-```
    ![](images/30.png)
    ![](images/31.png)
    ![](images/32.png)
    ![](images/33.png)
+   
+To make sure that the files in /mnt/apps have been udated - connect via SSH/Putty to NFS server and check README.MD file.
+```bash
+cat /mnt/apps/README.md
+```
+
    ![](images/34.png)
 
 
